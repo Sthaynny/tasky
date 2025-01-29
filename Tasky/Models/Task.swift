@@ -2,7 +2,7 @@
 //  Task.swift
 //  Tasky
 //
-//  Created by Giovanna Moeller on 28/05/24.
+//  Created by Igor Costa Nascimento on 29/01/25.
 //
 
 import Foundation
@@ -12,3 +12,10 @@ struct Task: Codable {
     var description: String?
     var isCompleted: Bool = false
 }
+
+
+var tasks: [Task] = [
+    Task(title: "Fazer Café"),
+    Task(title: "Estudar Swif e View code com UIkit", description: "Testes unitarios", isCompleted: true),
+    
+]

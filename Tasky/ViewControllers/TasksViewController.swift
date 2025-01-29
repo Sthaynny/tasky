@@ -8,8 +8,7 @@
 import UIKit
 
 class TasksViewController: UIViewController {
-    
-    private var task: [String] = ["test1", "test2","test2","test2","test2" ]
+     
     
     private lazy var taskTableView : UITableView = {
         let table = UITableView()
@@ -17,8 +16,16 @@ class TasksViewController: UIViewController {
         table.backgroundColor = .white
         table.delegate = self
         table.dataSource = self
+        table.layer.cornerRadius = 12
         return table
     }()
+    
+    private lazy var tasklIlustrationImageView:UIImageView = {
+        let ilustration = UIImageView(image: UIImage(named: AssetsConstants.tasksIllustration))
+        ilustration.translatesAutoresizingMaskIntoConstraints = false
+        ilustration.contentMode = .scaleAspectFit
+        return ilustration
+    }( )
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,12 +40,16 @@ class TasksViewController: UIViewController {
         navigationItem.hidesBackButton = true
     }
     private func addSubViews(){
+        view.addSubview(tasklIlustrationImageView)
         view.addSubview(taskTableView)
     }
     
     private func setupConstrants(){
         NSLayoutConstraint.activate([
-            taskTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            tasklIlustrationImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            tasklIlustrationImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            taskTableView.topAnchor.constraint(equalTo: tasklIlustrationImageView.bottomAnchor),
             taskTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor ),
             taskTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             taskTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor ),
@@ -51,13 +62,15 @@ class TasksViewController: UIViewController {
 
 extension TasksViewController:UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return task.count
+        return tasks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         var content = cell.defaultContentConfiguration()
-        content.text = task[indexPath.row]
+        let task = tasks[indexPath.row]
+        content.text = task.title
+        content.secondaryText = task.description ?? ""
         cell.contentConfiguration = content
         return cell
     }

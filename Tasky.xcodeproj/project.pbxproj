@@ -6,6 +6,17 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C275D2BF2D4AA6FC006C3F62 /* AssetsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C275D2B42D4AA6FC006C3F62 /* AssetsConstants.swift */; };
+		C275D2C02D4AA6FC006C3F62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C275D2B72D4AA6FC006C3F62 /* AppDelegate.swift */; };
+		C275D2C12D4AA6FC006C3F62 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C275D2B92D4AA6FC006C3F62 /* HomeViewController.swift */; };
+		C275D2C22D4AA6FC006C3F62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C275D2BD2D4AA6FC006C3F62 /* SceneDelegate.swift */; };
+		C275D2C32D4AA6FC006C3F62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C275D2B82D4AA6FC006C3F62 /* Assets.xcassets */; };
+		C275D2C52D4AA6FC006C3F62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C275D2BC2D4AA6FC006C3F62 /* LaunchScreen.storyboard */; };
+		C275D2C92D4AA800006C3F62 /* UiViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C275D2C82D4AA800006C3F62 /* UiViewController+.swift */; };
+		C275D2CB2D4AB15C006C3F62 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C275D2CA2D4AB15C006C3F62 /* TasksViewController.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		C275D27A2D4AA320006C3F62 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,27 +38,18 @@
 		C275D2632D4AA31D006C3F62 /* Tasky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C275D2792D4AA320006C3F62 /* TaskyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C275D2832D4AA320006C3F62 /* TaskyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C275D2B42D4AA6FC006C3F62 /* AssetsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsConstants.swift; sourceTree = "<group>"; };
+		C275D2B72D4AA6FC006C3F62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C275D2B82D4AA6FC006C3F62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C275D2B92D4AA6FC006C3F62 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C275D2BA2D4AA6FC006C3F62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C275D2BB2D4AA6FC006C3F62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C275D2BD2D4AA6FC006C3F62 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C275D2C82D4AA800006C3F62 /* UiViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiViewController+.swift"; sourceTree = "<group>"; };
+		C275D2CA2D4AB15C006C3F62 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		C275D28B2D4AA320006C3F62 /* Exceptions for "Tasky" folder in "Tasky" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = C275D2622D4AA31D006C3F62 /* Tasky */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		C275D2652D4AA31D006C3F62 /* Tasky */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				C275D28B2D4AA320006C3F62 /* Exceptions for "Tasky" folder in "Tasky" target */,
-			);
-			path = Tasky;
-			sourceTree = "<group>";
-		};
 		C275D27C2D4AA320006C3F62 /* TaskyTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = TaskyTests;
@@ -88,8 +90,7 @@
 		C275D25A2D4AA31D006C3F62 = {
 			isa = PBXGroup;
 			children = (
-				C275D2652D4AA31D006C3F62 /* Tasky */,
-				C275D2AD2D4AA62C006C3F62 /* New Group */,
+				C275D2BE2D4AA6FC006C3F62 /* Tasky */,
 				C275D27C2D4AA320006C3F62 /* TaskyTests */,
 				C275D2862D4AA320006C3F62 /* TaskyUITests */,
 				C275D2642D4AA31D006C3F62 /* Products */,
@@ -106,11 +107,52 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C275D2AD2D4AA62C006C3F62 /* New Group */ = {
+		C275D2B52D4AA6FC006C3F62 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C275D2B42D4AA6FC006C3F62 /* AssetsConstants.swift */,
 			);
-			path = "New Group";
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C275D2B62D4AA6FC006C3F62 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C275D2B52D4AA6FC006C3F62 /* Utils */,
+				C275D2C72D4AA7E8006C3F62 /* Extention */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C275D2BE2D4AA6FC006C3F62 /* Tasky */ = {
+			isa = PBXGroup;
+			children = (
+				C275D2B62D4AA6FC006C3F62 /* Core */,
+				C275D2C62D4AA77C006C3F62 /* ViewControllers */,
+				C275D2B72D4AA6FC006C3F62 /* AppDelegate.swift */,
+				C275D2B82D4AA6FC006C3F62 /* Assets.xcassets */,
+				C275D2BA2D4AA6FC006C3F62 /* Info.plist */,
+				C275D2BC2D4AA6FC006C3F62 /* LaunchScreen.storyboard */,
+				C275D2BD2D4AA6FC006C3F62 /* SceneDelegate.swift */,
+			);
+			path = Tasky;
+			sourceTree = "<group>";
+		};
+		C275D2C62D4AA77C006C3F62 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C275D2B92D4AA6FC006C3F62 /* HomeViewController.swift */,
+				C275D2CA2D4AB15C006C3F62 /* TasksViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C275D2C72D4AA7E8006C3F62 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				C275D2C82D4AA800006C3F62 /* UiViewController+.swift */,
+			);
+			path = Extention;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,9 +169,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				C275D2652D4AA31D006C3F62 /* Tasky */,
 			);
 			name = Tasky;
 			packageProductDependencies = (
@@ -233,6 +272,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C275D2C32D4AA6FC006C3F62 /* Assets.xcassets in Resources */,
+				C275D2C52D4AA6FC006C3F62 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +298,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C275D2BF2D4AA6FC006C3F62 /* AssetsConstants.swift in Sources */,
+				C275D2C02D4AA6FC006C3F62 /* AppDelegate.swift in Sources */,
+				C275D2C92D4AA800006C3F62 /* UiViewController+.swift in Sources */,
+				C275D2C12D4AA6FC006C3F62 /* HomeViewController.swift in Sources */,
+				C275D2C22D4AA6FC006C3F62 /* SceneDelegate.swift in Sources */,
+				C275D2CB2D4AB15C006C3F62 /* TasksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +335,17 @@
 			targetProxy = C275D2842D4AA320006C3F62 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C275D2BC2D4AA6FC006C3F62 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C275D2BB2D4AA6FC006C3F62 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C275D28D2D4AA320006C3F62 /* Debug */ = {

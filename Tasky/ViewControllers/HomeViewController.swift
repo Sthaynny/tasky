@@ -40,6 +40,7 @@ class HomeViewController: UIViewController {
         button.backgroundColor = UIColor(named: Colors.darkPurple)
         button.layer.cornerRadius = 12.6
         button.setTitleColor(.white, for: .normal)
+        button.addTarget(self, action: #selector(didTapStartedButton), for: .touchUpInside)
         return button
     }()
 
@@ -76,6 +77,11 @@ class HomeViewController: UIViewController {
             getStartedButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 26),
             getStartedButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -26),
         ])
+    }
+    
+    
+    @objc func didTapStartedButton()  {
+        navigationController?.pushViewController(TasksViewController(), animated: true)
     }
 
 

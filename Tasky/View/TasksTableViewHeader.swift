@@ -11,9 +11,10 @@ class TasksTableViewHeader: UIView {
 
     private lazy var titleLabel : UILabel = {
         let label = UILabel( )
+        label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Tarefas"
-        label.font = .systemFont(ofSize: 20)
-        label.textColor = .darkPurple
+        label.font = .systemFont(ofSize: 20, weight: .bold)
+        label.textColor = .darkPurple 
         label.textAlignment = .center
         return label
     }( )

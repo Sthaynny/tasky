@@ -17,6 +17,7 @@
 		C275D2CB2D4AB15C006C3F62 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C275D2CA2D4AB15C006C3F62 /* TasksViewController.swift */; };
 		C275D2CE2D4AB5B6006C3F62 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = C275D2CC2D4AB5B6006C3F62 /* Task.swift */; };
 		C275D2D12D4ABFC8006C3F62 /* TasksTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C275D2D02D4ABFC8006C3F62 /* TasksTableViewHeader.swift */; };
+		C275D2D32D4AC6FC006C3F62 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C275D2D22D4AC6FC006C3F62 /* AddTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		C275D2CA2D4AB15C006C3F62 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		C275D2CC2D4AB5B6006C3F62 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		C275D2D02D4ABFC8006C3F62 /* TasksTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewHeader.swift; sourceTree = "<group>"; };
+		C275D2D22D4AC6FC006C3F62 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -149,6 +151,7 @@
 			children = (
 				C275D2B92D4AA6FC006C3F62 /* HomeViewController.swift */,
 				C275D2CA2D4AB15C006C3F62 /* TasksViewController.swift */,
+				C275D2D22D4AC6FC006C3F62 /* AddTaskViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				C275D2C22D4AA6FC006C3F62 /* SceneDelegate.swift in Sources */,
 				C275D2CE2D4AB5B6006C3F62 /* Task.swift in Sources */,
 				C275D2CB2D4AB15C006C3F62 /* TasksViewController.swift in Sources */,
+				C275D2D32D4AC6FC006C3F62 /* AddTaskViewController.swift in Sources */,
 				C275D2D12D4ABFC8006C3F62 /* TasksTableViewHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

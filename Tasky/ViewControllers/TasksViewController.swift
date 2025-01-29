@@ -16,7 +16,10 @@ class TasksViewController: UIViewController {
         table.backgroundColor = .white
         table.delegate = self
         table.dataSource = self
-        table.layer.cornerRadius = 12
+        table.layer.cornerRadius = 24
+        let header = TasksTableViewHeader(frame: .init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 64))
+        table.tableHeaderView = header
+        
         return table
     }()
     
@@ -78,9 +81,15 @@ extension TasksViewController:UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 64
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
+        
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            print("Toque no botão de remover")
+        }
+    }
     
 }

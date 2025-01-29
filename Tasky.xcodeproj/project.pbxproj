@@ -89,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				C275D2652D4AA31D006C3F62 /* Tasky */,
+				C275D2AD2D4AA62C006C3F62 /* New Group */,
 				C275D27C2D4AA320006C3F62 /* TaskyTests */,
 				C275D2862D4AA320006C3F62 /* TaskyUITests */,
 				C275D2642D4AA31D006C3F62 /* Products */,
@@ -103,6 +104,13 @@
 				C275D2832D4AA320006C3F62 /* TaskyUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C275D2AD2D4AA62C006C3F62 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -82,6 +82,8 @@ class TasksViewController: UIViewController {
         guard let indexPath = taskTableView.indexPath(for: cell) else { return }
 //        taskRepository.completeTask(at: indexPath.row)
 //        tasksTableView.reloadRows(at: [indexPath], with: .automatic)
+        tasks[indexPath.row].isCompleted.toggle()
+        taskTableView.reloadRows(at: [indexPath], with: .automatic)
     }
 
 }

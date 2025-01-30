@@ -2,22 +2,22 @@
    <img src="https://github.com/user-attachments/assets/eb1a85c5-b298-4323-b55d-d37b915a6517" alt="app" width="200"/>
 </p>
 
-<h1 align="center">Nome do projeto</h1>
+<h1 align="center">Task</h1>
 
 <p align="center">
    <a href="https://www.linkedin.com/in/igor-sthaynny/">
       <img alt="Igor Sthaynny" src="https://img.shields.io/badge/-Sthaynny-5965e0?style=flat&logo=Linkedin&logoColor=white"/>
    </a>
-  <img alt="Languages" src="https://img.shields.io/github/languages/count/Sthaynny/template_portugues?color=%235963C5" />
-  <img alt="lastcommit" src="https://img.shields.io/github/last-commit/Sthaynny/template_portugues?color=%235761C3" />
-  <img alt="License" src="https://img.shields.io/github/license/Sthaynny/template_portugues?color=%235E69D7" />
-  <img alt="Issues" src="https://img.shields.io/github/issues/Sthaynny/template_portugues?color=%235965E0">
+  <img alt="Languages" src="https://img.shields.io/github/languages/count/Sthaynny/tasky?color=%235963C5" />
+  <img alt="lastcommit" src="https://img.shields.io/github/last-commit/Sthaynny/tasky?color=%235761C3" />
+  <img alt="License" src="https://img.shields.io/github/license/Sthaynny/tasky?color=%235E69D7" />
+  <img alt="Issues" src="https://img.shields.io/github/issues/Sthaynny/tasky?color=%235965E0">
   <a href="mailto:igorsthaynny@gmail.com">
    <img alt="E-mail" src="https://img.shields.io/badge/-igorsthaynny%40gmail.com-%23525DCB" />
   </a>
 </p>
 
-<p align="center">Breve descricao do projeto</p>
+<p align="center">Projeto para estudar conceitos do swift(Uikit) utilizando a abordagem View code</p>
 
 <hr />
 
@@ -39,24 +39,24 @@
 
 # :camera: Screenshots
 <div align="center">
-   <img src="https://user-images.githubusercontent.com/46109133/155231022-7d54b0eb-a0c5-4e60-a244-3e5c30fc9373.jpeg" width="230"/>
-   <img src="https://user-images.githubusercontent.com/46109133/155231022-7d54b0eb-a0c5-4e60-a244-3e5c30fc9373.jpeg" width="230"/>
-   <img src="https://user-images.githubusercontent.com/46109133/155231022-7d54b0eb-a0c5-4e60-a244-3e5c30fc9373.jpeg" width="230"/>
+<img width="480" alt="Captura de Tela 2025-01-29 às 22 21 22" src="https://github.com/user-attachments/assets/bc0a3545-a594-4822-91f2-8073c81af548" />
+<img width="480" alt="Captura de Tela 2025-01-29 às 22 21 06" src="https://github.com/user-attachments/assets/5f203425-a9db-4f89-800d-1295e9ea70f5" />
+<img width="480" alt="Captura de Tela 2025-01-29 às 22 21 28" src="https://github.com/user-attachments/assets/d314c68b-965a-4239-85e1-8909e2a3bbd3" />
+<img width="480" alt="Captura de Tela 2025-01-29 às 22 21 37" src="https://github.com/user-attachments/assets/87358412-d41a-4071-b858-682e7eb84166" />
 
 </div>
   
 
-
 # :rocket: Tecnologias
 Esse:
 
-Descreva as tecnologias usadas aqui
+- Swift
 
 # :computer: Como rodar
 
 ```bash
 # Clone Repositorio
-$ git clone https://github.com/Sthaynny/habilitacao_quiz.git
+$ git clone https://github.com/Sthaynny/tasky.git
 
 # Instale as dependências
 $ flutter pub get
@@ -67,7 +67,7 @@ $ flutter run
 
 # :bug: Issues
 
-Cria um issue <a href="https://github.com/Sthaynny/template_portugues/issues">nova issue</a>, será uma honra poder ajudá-lo a resolver e melhorar ainda mais nosso aplicativo.
+Cria um issue <a href="https://github.com/Sthaynny/tasky/issues">nova issue</a>, será uma honra poder ajudá-lo a resolver e melhorar ainda mais nosso aplicativo.
 
 # :sparkles: Contribuição
 

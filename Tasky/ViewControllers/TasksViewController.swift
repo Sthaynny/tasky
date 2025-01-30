@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol TaskDelegate: AnyObject {
+    func didAddTask(newTask: Task)
+}
+
 class TasksViewController: UIViewController {
      
     
@@ -18,6 +22,7 @@ class TasksViewController: UIViewController {
         table.dataSource = self
         table.layer.cornerRadius = 24
         let header = TasksTableViewHeader(frame: .init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 64))
+        header.delegate = self
         table.tableHeaderView = header
         
         return table
@@ -29,6 +34,18 @@ class TasksViewController: UIViewController {
         ilustration.contentMode = .scaleAspectFit
         return ilustration
     }( )
+    
+    
+    private func createTaskCheckmarkButton(task: Task) -> UIButton {
+        let completeButton = UIButton(type: .system)
+        completeButton.addTarget(self, action: #selector(didTapCompleteTaskButton), for: .touchUpInside)
+        let symbolName = task.isCompleted ? "checkmark.circle.fill" : "checkmark.circle"
+        let configuration = UIImage.SymbolConfiguration(pointSize: 24)
+        let image = UIImage(systemName: symbolName, withConfiguration: configuration)
+        completeButton.setImage(image, for: .normal)
+        completeButton.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
+        return completeButton
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +76,13 @@ class TasksViewController: UIViewController {
             
         ])
     }
+    
+    @objc func didTapCompleteTaskButton(_ sender: UIButton) {
+        guard let cell = sender.superview as? UITableViewCell else { return }
+        guard let indexPath = taskTableView.indexPath(for: cell) else { return }
+//        taskRepository.completeTask(at: indexPath.row)
+//        tasksTableView.reloadRows(at: [indexPath], with: .automatic)
+    }
 
 }
 
@@ -75,6 +99,7 @@ extension TasksViewController:UITableViewDelegate, UITableViewDataSource{
         content.text = task.title
         content.secondaryText = task.description ?? ""
         cell.contentConfiguration = content
+        cell.accessoryView = createTaskCheckmarkButton(task: task)
         return cell
     }
     
@@ -91,5 +116,15 @@ extension TasksViewController:UITableViewDelegate, UITableViewDataSource{
             print("Toque no botão de remover")
         }
     }
+    
+}
+
+
+extension TasksViewController: TaskTableViewHeaderDelegate{
+    func didTapAddTaskButton() {
+        navigationController?.present(AddTaskViewController(), animated: true)
+    }
+    
+    
     
 }

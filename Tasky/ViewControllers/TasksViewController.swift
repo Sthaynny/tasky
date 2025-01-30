@@ -128,3 +128,10 @@ extension TasksViewController: TaskTableViewHeaderDelegate{
     
     
 }
+
+
+extension TasksViewController: TaskDelegate{
+    func didAddTask(newTask: Task) {
+        taskTableView.reloadData()
+    }
+}

@@ -113,7 +113,8 @@ extension TasksViewController:UITableViewDelegate, UITableViewDataSource{
         
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            print("Toque no botão de remover")
+            tasks.remove(at: indexPath.row)
+            taskTableView.reloadData()
         }
     }
     
@@ -122,11 +123,10 @@ extension TasksViewController:UITableViewDelegate, UITableViewDataSource{
 
 extension TasksViewController: TaskTableViewHeaderDelegate{
     func didTapAddTaskButton() {
-        navigationController?.present(AddTaskViewController(), animated: true)
+        let addTaskVC = AddTaskViewController()
+        addTaskVC.delegate = self
+        navigationController?.present(addTaskVC, animated: true)
     }
-    
-    
-    
 }
 
 

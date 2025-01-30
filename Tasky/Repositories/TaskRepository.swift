@@ -19,15 +19,14 @@ class TaskRepository{
     }
     
     func removeTask(at index:Int) -> Void {
-        guard index>0, index<tasks.count else {
+        guard index >= 0, index<tasks.count else {
             return
         }
         tasks.remove(at: index)
     }
     
     func completeTask(at index: Int) -> Void {
-        
-        guard index>0, index<tasks.count else {
+        guard index>=0, index<tasks.count else {
             return
         }
         tasks[index].isCompleted.toggle()

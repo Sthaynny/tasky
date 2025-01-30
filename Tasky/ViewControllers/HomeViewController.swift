@@ -81,7 +81,7 @@ class HomeViewController: UIViewController {
     
     
     @objc func didTapStartedButton()  {
-        navigationController?.pushViewController(TasksViewController(), animated: true)
+        navigationController?.pushViewController(TasksViewController( ), animated: true)
     }
 
 

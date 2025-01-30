@@ -13,9 +13,4 @@ struct Task: Codable {
     var isCompleted: Bool = false
 }
 
-
-var tasks: [Task] = [
-    Task(title: "Fazer Café"),
-    Task(title: "Estudar Swif e View code com UIkit", description: "Testes unitarios", isCompleted: true),
-    
-]
+ 

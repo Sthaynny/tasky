@@ -13,7 +13,9 @@ protocol TaskDelegate: AnyObject {
 
 class TasksViewController: UIViewController {
      
+    private var taskRepository: TaskRepository
     
+ 
     private lazy var taskTableView : UITableView = {
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints = false
@@ -45,6 +47,15 @@ class TasksViewController: UIViewController {
         completeButton.setImage(image, for: .normal)
         completeButton.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
         return completeButton
+    }
+    
+    init(taskRepository: TaskRepository = TaskRepository()) {
+        self.taskRepository = taskRepository
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     override func viewDidLoad() {
@@ -80,9 +91,7 @@ class TasksViewController: UIViewController {
     @objc func didTapCompleteTaskButton(_ sender: UIButton) {
         guard let cell = sender.superview as? UITableViewCell else { return }
         guard let indexPath = taskTableView.indexPath(for: cell) else { return }
-//        taskRepository.completeTask(at: indexPath.row)
-//        tasksTableView.reloadRows(at: [indexPath], with: .automatic)
-        tasks[indexPath.row].isCompleted.toggle()
+        taskRepository.completeTask(at: indexPath.row)
         taskTableView.reloadRows(at: [indexPath], with: .automatic)
     }
 
@@ -91,13 +100,13 @@ class TasksViewController: UIViewController {
 
 extension TasksViewController:UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tasks.count
+        return taskRepository.tasks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         var content = cell.defaultContentConfiguration()
-        let task = tasks[indexPath.row]
+        let task = taskRepository.tasks[indexPath.row]
         content.text = task.title
         content.secondaryText = task.description ?? ""
         cell.contentConfiguration = content
@@ -115,7 +124,7 @@ extension TasksViewController:UITableViewDelegate, UITableViewDataSource{
         
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            tasks.remove(at: indexPath.row)
+            taskRepository.removeTask(at: indexPath.row)
             taskTableView.reloadData()
         }
     }
@@ -134,6 +143,7 @@ extension TasksViewController: TaskTableViewHeaderDelegate{
 
 extension TasksViewController: TaskDelegate{
     func didAddTask(newTask: Task) {
+        taskRepository.addTask(newTask)
         taskTableView.reloadData()
     }
 }

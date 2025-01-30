@@ -19,6 +19,7 @@
 		C275D2D12D4ABFC8006C3F62 /* TasksTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C275D2D02D4ABFC8006C3F62 /* TasksTableViewHeader.swift */; };
 		C275D2D32D4AC6FC006C3F62 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C275D2D22D4AC6FC006C3F62 /* AddTaskViewController.swift */; };
 		C275D2D62D4AFEFC006C3F62 /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C275D2D52D4AFEFC006C3F62 /* TaskRepository.swift */; };
+		C275D2D92D4B0481006C3F62 /* UserDefaultsPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C275D2D82D4B0481006C3F62 /* UserDefaultsPersistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		C275D2D02D4ABFC8006C3F62 /* TasksTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewHeader.swift; sourceTree = "<group>"; };
 		C275D2D22D4AC6FC006C3F62 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		C275D2D52D4AFEFC006C3F62 /* TaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepository.swift; sourceTree = "<group>"; };
+		C275D2D82D4B0481006C3F62 /* UserDefaultsPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsPersistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -135,6 +137,7 @@
 		C275D2BE2D4AA6FC006C3F62 /* Tasky */ = {
 			isa = PBXGroup;
 			children = (
+				C275D2D72D4B0463006C3F62 /* Persistence */,
 				C275D2D42D4AFEE4006C3F62 /* Repositories */,
 				C275D2CF2D4ABF88006C3F62 /* View */,
 				C275D2B62D4AA6FC006C3F62 /* Core */,
@@ -189,6 +192,14 @@
 				C275D2D52D4AFEFC006C3F62 /* TaskRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		C275D2D72D4B0463006C3F62 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				C275D2D82D4B0481006C3F62 /* UserDefaultsPersistence.swift */,
+			);
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +351,7 @@
 				C275D2C12D4AA6FC006C3F62 /* HomeViewController.swift in Sources */,
 				C275D2D62D4AFEFC006C3F62 /* TaskRepository.swift in Sources */,
 				C275D2C22D4AA6FC006C3F62 /* SceneDelegate.swift in Sources */,
+				C275D2D92D4B0481006C3F62 /* UserDefaultsPersistence.swift in Sources */,
 				C275D2CE2D4AB5B6006C3F62 /* Task.swift in Sources */,
 				C275D2CB2D4AB15C006C3F62 /* TasksViewController.swift in Sources */,
 				C275D2D32D4AC6FC006C3F62 /* AddTaskViewController.swift in Sources */,

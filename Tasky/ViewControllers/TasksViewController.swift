@@ -49,7 +49,7 @@ class TasksViewController: UIViewController {
         return completeButton
     }
     
-    init(taskRepository: TaskRepository = TaskRepository()) {
+    init(taskRepository: TaskRepository = TaskRepository( persistence: UserDefaultsPersistence())) {
         self.taskRepository = taskRepository
         super.init(nibName: nil, bundle: nil)
     }
